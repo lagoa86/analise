@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solicite sua Análise de Crédito | Imóvel Próprio</title>
+  <meta name="description" content="Solicite sua análise de crédito imobiliário e descubra hoje qual imóvel você pode comprar. Atendimento personalizado via WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0A49FF; --primary-dark:#0838C7; --accent:#25D366; --bg:#0b1220; --text:#1b2430; --muted:#6B7280; --card:#ffffff; --ring:rgba(10,73,255,.16)
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,Helvetica,sans-serif;color:var(--text);background:#F6F8FF}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1120px,92%);margin-inline:auto}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:14px 20px;border-radius:14px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 10px 24px rgba(37,211,102,.25);transition:.25s;will-change:transform}
+    .btn:hover{transform:translateY(-1px);filter:saturate(1.1)}
+    .btn--ghost{background:#fff;color:var(--primary);border:2px solid var(--primary)}
+
+    /* HERO */
+    .hero{position:relative;isolation:isolate}
+    .hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center;padding:64px 0}
+    .hero__badge{display:inline-flex;align-items:center;gap:.5rem;background:#EEF2FF;color:var(--primary);padding:8px 12px;border-radius:999px;font-weight:600;font-size:.9rem}
+    .hero h1{font-size:clamp(1.9rem, 2.6vw + 1rem, 3.1rem);line-height:1.15;margin:.6rem 0 1rem}
+    .hero p{font-size:1.05rem;color:#374151;margin:0 0 1.4rem}
+    .hero__cta{display:flex;flex-wrap:wrap;gap:12px}
+    .hero__media{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(8,56,199,.2);border:1px solid #e6ebff}
+    .hero__media img{aspect-ratio:4/3;object-fit:cover}
+    .hero__stamp{position:absolute;bottom:14px;left:14px;background:#ffffffd9;color:#111;padding:10px 14px;border-radius:12px;font-weight:600;backdrop-filter:blur(6px)}
+
+    /* BENEFITS */
+    .benefits{padding:48px 0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border-radius:18px;padding:22px;border:1px solid #eef0ff;box-shadow:0 10px 28px rgba(8,56,199,.06)}
+    .card h3{margin:8px 0 6px;font-size:1.1rem}
+    .card p{margin:0;color:var(--muted)}
+
+    /* HOW */
+    .how{padding:54px 0}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{background:#fff;border:1px dashed #d8defe;border-radius:16px;padding:18px}
+    .step b{display:inline-flex;width:36px;height:36px;border-radius:50%;align-items:center;justify-content:center;background:#EEF2FF;color:var(--primary)}
+
+    /* VIDEO */
+    .video{padding:64px 0}
+    .video__wrap{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.15)}
+    .video__wrap iframe,.video__wrap video{width:100%;height:60svh;max-height:560px;display:block}
+
+    /* CTA BAR */
+    .cta-bar{position:sticky;bottom:0;z-index:30;background:linear-gradient(90deg,var(--primary),var(--primary-dark));color:#fff}
+    .cta-bar__inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:14px 0}
+
+    /* FAQ */
+    .faq{padding:60px 0}
+    details{background:#fff;border:1px solid #e9edff;border-radius:14px;padding:14px 16px}
+    details+details{margin-top:10px}
+    summary{cursor:pointer;font-weight:600}
+
+    /* FOOTER */
+    footer{padding:32px 0;color:#94a3b8}
+
+    /* FLOATING WA */
+    .floating-wa{position:fixed;right:18px;bottom:18px;z-index:50}
+    .fab{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);box-shadow:0 16px 30px rgba(37,211,102,.35)}
+
+    @media (max-width: 920px){
+      .hero__grid{grid-template-columns:1fr;gap:26px}
+      .cards{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .video__wrap iframe,.video__wrap video{height:52svh}
+    }
+    @media (max-width: 640px){
+      .cards{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky CTA bar -->
+  <div class="cta-bar">
+    <div class="container cta-bar__inner">
+      <strong>Descubra hoje qual imóvel você pode comprar</strong>
+      <a class="btn" href="https://wa.me/5531992110188?text=Ol%C3%A1!%20Quero%20minha%20an%C3%A1lise%20de%20cr%C3%A9dito%20imobili%C3%A1rio." target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.46 12c0 5.79-4.69 10.48-10.48 10.48-1.84 0-3.57-.48-5.08-1.32L2 22l.88-4.86a10.42 10.42 0 0 1-1.4-5.14C1.48 6.21 6.17 1.52 12 1.52S22.46 6.21 22.46 12Z"/><path d="M16.24 14.3c-.25.7-1.46 1.34-2.02 1.38-.56.03-1.27.05-3.52-1.17-2.96-1.6-4.06-3.7-4.2-3.87-.14-.17-1-1.3-1-2.48s.63-1.76.86-2.01c.23-.25.5-.32.66-.32.16 0 .33 0 .48.01.15.02.36-.06.57.43.21.49.72 1.7.79 1.83.07.14.11.3.02.47-.09.17-.13.28-.28.43-.14.14-.3.33-.43.45-.14.12-.28.25-.12.56.16.32.72 1.19 1.54 1.93 1.06.94 1.95 1.23 2.27 1.37.32.14.5.12.69-.08.19-.2.8-.93 1.01-1.25.21-.32.43-.26.72-.15.29.11 1.82.86 2.13 1.02.31.16.52.24.59.37.07.13.07.75-.18 1.45Z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="hero__badge">Análise gratuita • Resposta rápida</span>
+        <h1>Solicite sua <span style="color:var(--primary)">Análise de Crédito</span> e saiba qual imóvel você pode comprar</h1>
+        <p>Atendimento humano e direto no WhatsApp. Eu comparo condições em diferentes bancos e mostro seu poder de compra com segurança e planejamento.</p>
+        <div class="hero__cta">
+          <a class="btn" href="https://wa.me/5531992110188?text=Ol%C3%A1!%20Quero%20minha%20an%C3%A1lise%20de%20cr%C3%A9dito%20para%20comprar%20um%20im%C3%B3vel." target="_blank" rel="noopener">💬 Solicitar Análise no WhatsApp</a>
+          <a class="btn btn--ghost" href="#video">▶️ Ver como funciona (vídeo)</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img src="https://media.istockphoto.com/id/1195224788/pt/foto/happiness-is-homemade.jpg?s=612x612&w=0&k=20&c=shbLw2KGOkzOA4wXjzBh4MYlJWXoxuFI-gYanEn8o0I=" alt="Você Feliz no seu novo lar" loading="lazy">
+        <div class="hero__stamp">Aprovação rápida • Sem burocracia</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits">
+    <div class="container">
+      <div class="cards">
+        <article class="card">
+          <h3>Qual imóvel cabe no seu bolso</h3>
+          <p>Simulamos cenários e te mostramos o valor ideal do imóvel para seu perfil financeiro.</p>
+        </article>
+        <article class="card">
+          <h3>Melhores condições de crédito</h3>
+          <p>Comparamos taxas e prazos em diferentes bancos para maximizar sua aprovação.</p>
+        </article>
+        <article class="card">
+          <h3>Acompanhamento do início ao fim</h3>
+          <p>Do pré-aprovado até a assinatura, você não fica sozinho em nenhuma etapa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="container">
+      <h2 style="text-align:center;margin:0 0 18px">Como funciona</h2>
+      <p style="text-align:center;color:var(--muted);margin:0 0 24px">Passos simples para sair do plano e ir para as chaves</p>
+      <div class="steps">
+        <div class="step"><b>1</b> Você solicita no WhatsApp e envia dados básicos.</div>
+        <div class="step"><b>2</b> Eu analiso seu perfil e apresento as melhores opções.</div>
+        <div class="step"><b>3</b> Você descobre o valor do imóvel que pode comprar.</div>
+        <div class="step"><b>4</b> Partimos para a aprovação e assinatura com segurança.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section id="video" class="video">
+    <div class="container">
+      <h2 style="text-align:center;margin:0 0 18px">Assista: em 60s eu explico a análise</h2>
+      <p style="text-align:center;color:var(--muted);margin:0 0 24px">Vídeo curto com o passo a passo do que acontece após seu primeiro contato.</p>
+     <div class="video__wrap" style="position:relative;">
+  <iframe width="1690" height="656"
+    src="https://www.youtube.com/embed/ru8WTl-fPf0?controls=0&modestbranding=1&rel=0&disablekb=1"
+    title="Como financiar meu imóvel pelo novo Minha Casa, Minha Vida?"
+    frameborder="0"
+    allow="autoplay; encrypted-media; picture-in-picture"
+    allowfullscreen
+    style="pointer-events:none;">
+  </iframe>
+  <!-- Camada transparente para bloquear cliques -->
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;"></div>
+</div>
+
+      <div style="text-align:center;margin-top:18px">
+        <a class="btn" href="https://wa.me/5531992110188?text=Quero%20minha%20an%C3%A1lise%20de%20cr%C3%A9dito%20ap%C3%B3s%20ver%20o%20v%C3%ADdeo." target="_blank" rel="noopener">💬 Fazer minha Análise agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h2 style="text-align:center;margin:0 0 18px">Perguntas frequentes</h2>
+      <div style="max-width:860px;margin-inline:auto">
+        <details>
+          <summary>Quanto custa a análise?</summary>
+          <p>A análise inicial é gratuita. Se você avançar com a aprovação, explico todos os custos com transparência.</p>
+        </details>
+        <details>
+          <summary>Em quanto tempo recebo um retorno?</summary>
+          <p>Normalmente no mesmo dia útil, após envio dos dados básicos via WhatsApp.</p>
+        </details>
+        <details>
+          <summary>Preciso já ter um imóvel definido?</summary>
+          <p>Não. A análise te ajuda justamente a entender o ticket ideal para buscar o imóvel certo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center">
+      <p>© 2025 • Assessoria Imobiliária • Todos os direitos reservados</p>
+      <a class="btn btn--ghost" href="https://wa.me/5531992110188?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20financiamento." target="_blank" rel="noopener">💬 Tirar uma dúvida</a>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a class="floating-wa" href="https://wa.me/5531992110188?text=Olá!%20Vim%20da%20sua%20landing%20page%20e%20quero%20minha%20análise%20de%20crédito." target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <div class="fab" title="Falar no WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.46 12c0 5.79-4.69 10.48-10.48 10.48-1.84 0-3.57-.48-5.08-1.32L2 22l.88-4.86a10.42 10.42 0 0 1-1.4-5.14C1.48 6.21 6.17 1.52 12 1.52S22.46 6.21 22.46 12Z"/><path d="M16.24 14.3c-.25.7-1.46 1.34-2.02 1.38-.56.03-1.27.05-3.52-1.17-2.96-1.6-4.06-3.7-4.2-3.87-.14-.17-1-1.3-1-2.48s.63-1.76.86-2.01c.23-.25.5-.32.66-.32.16 0 .33 0 .48.01.15.02.36-.06.57.43.21.49.72 1.7.79 1.83.07.14.11.3.02.47-.09.17-.13.28-.28.43-.14.14-.3.33-.43.45-.14.12-.28.25-.12.56.16.32.72 1.19 1.54 1.93 1.06.94 1.95 1.23 2.27 1.37.32.14.5.12.69-.08.19-.2.8-.93 1.01-1.25.21-.32.43-.26.72-.15.29.11 1.82.86 2.13 1.02.31.16.52.24.59.37.07.13.07.75-.18 1.45Z"/></svg>
+    </div>
+  </a>
+
+  <!-- Schema.org (opcional) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Assessoria de Crédito Imobiliário",
+    "areaServed": "Brasil",
+    "sameAs": [
+      "https://wa.me/5531992110188"
+    ]
+  }
+  </script>
+</body>
+</html>
