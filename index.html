@@ -149,9 +149,9 @@
     <div class="container">
       <h2 style="text-align:center;margin:0 0 18px">Assista: em 60s eu explico a análise</h2>
       <p style="text-align:center;color:var(--muted);margin:0 0 24px">Vídeo curto com o passo a passo do que acontece após seu primeiro contato.</p>
-  <div class="video__wrap" style="position:relative; cursor:pointer;">
-  <iframe id="yt-video" width="1690" height="656"
-    src="https://www.youtube.com/embed/ru8WTl-fPf0?controls=0&modestbranding=1&rel=0&disablekb=1&mute=1&autoplay=0"
+     <div class="video__wrap" style="position:relative;">
+  <iframe width="1690" height="656"
+    src="https://www.youtube.com/embed/ru8WTl-fPf0?controls=0&modestbranding=1&rel=0&disablekb=1"
     title="Como financiar meu imóvel pelo novo Minha Casa, Minha Vida?"
     frameborder="0"
     allow="autoplay; encrypted-media; picture-in-picture"
@@ -159,24 +159,8 @@
     style="pointer-events:none;">
   </iframe>
   <!-- Camada transparente para bloquear cliques -->
-  <div id="video-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;"></div>
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;"></div>
 </div>
-
-<script>
-  const iframe = document.getElementById('yt-video');
-  const overlay = document.getElementById('video-overlay');
-
-  overlay.addEventListener('mouseenter', () => {
-    // adiciona autoplay ao src
-    iframe.src = iframe.src.replace('&autoplay=0', '&autoplay=1');
-  });
-
-  overlay.addEventListener('mouseleave', () => {
-    // pausa ao tirar o mouse
-    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-  });
-</script>
-
 
       <div style="text-align:center;margin-top:18px">
         <a class="btn" href="https://wa.me/5531992110188?text=Quero%20minha%20an%C3%A1lise%20de%20cr%C3%A9dito%20ap%C3%B3s%20ver%20o%20v%C3%ADdeo." target="_blank" rel="noopener">💬 Fazer minha Análise agora</a>
