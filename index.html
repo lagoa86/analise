@@ -3,41 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Solicite sua Análise de Crédito Imobiliário | Imóvel Próprio</title>
-  <meta name="description" content="Descubra seu poder de compra com análise gratuita de crédito imobiliário. Atendimento direto pelo WhatsApp. Sem burocracia.">
 
+  <!-- Título e descrição para WhatsApp preview -->
+  <title>Solicite sua Análise de Crédito | Imóvel Próprio</title>
+  <meta name="description" content="Solicite sua análise de crédito imobiliário gratuita e descubra qual imóvel você pode comprar. Atendimento direto via WhatsApp com resposta rápida.">
+  
   <!-- Open Graph / WhatsApp Preview -->
-  <meta property="og:title" content="Descubra Qual Imóvel Você Pode Comprar! 🏡">
-  <meta property="og:description" content="Análise gratuita de crédito imobiliário. Veja quanto você pode financiar e compre seu imóvel com segurança.">
-  <meta property="og:image" content="https://img.freepik.com/fotos-premium/vista-acima-de-um-casal-feliz-descansando-no-chao-em-sua-nova-casa_1326977-2462.jpg?w=1200">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:title" content="Análise de Crédito Imobiliário Grátis">
+  <meta property="og:description" content="Descubra seu poder de compra e as melhores condições de financiamento. Resposta rápida via WhatsApp.">
+  <meta property="og:image" content="https://img.freepik.com/fotos-premium/vista-acima-de-um-casal-feliz-descansando-no-chao-em-sua-nova-casa_1326977-2462.jpg">
   <meta property="og:url" content="https://seusite.com">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Imóvel Próprio">
-
-  <!-- Twitter -->
+  
+  <!-- Twitter Card (opcional) -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Descubra Qual Imóvel Você Pode Comprar! 🏡">
-  <meta name="twitter:description" content="Análise gratuita de crédito imobiliário. Veja quanto você pode financiar.">
-  <meta name="twitter:image" content="https://img.freepik.com/fotos-premium/vista-acima-de-um-casal-feliz-descansando-no-chao-em-sua-nova-casa_1326977-2462.jpg?w=1200">
-  <meta name="twitter:site" content="@seupreferido">
+  <meta name="twitter:title" content="Análise de Crédito Grátis">
+  <meta name="twitter:description" content="Descubra seu poder de compra com análise gratuita e rápida.">
+  <meta name="twitter:image" content="https://img.freepik.com/fotos-premium/vista-acima-de-um-casal-feliz-descansando-no-chao-em-sua-nova-casa_1326977-2462.jpg">
 
-  <!-- Pró-carregamento de fonte -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --primary: #0A49FF;
       --primary-dark: #0838C7;
-      --accent: #25D366;
-      --bg: #0b1220;
+      --accent: #25D366; /* Verde do WhatsApp */
+      --bg: #F6F8FF;
       --text: #1b2430;
       --muted: #6B7280;
       --card: #ffffff;
-      --ring: rgba(10, 73, 255, 0.16);
+      --border: #e9edff;
+      --shadow: rgba(8, 56, 199, 0.12);
     }
 
     * {
@@ -47,16 +46,14 @@
     }
 
     html, body {
-      height: 100%;
-      font-family: 'Poppins', system-ui, sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: var(--text);
-      background: #F6F8FF;
+      background: var(--bg);
       line-height: 1.6;
     }
 
-    img, iframe, video {
+    img {
       max-width: 100%;
-      height: auto;
       display: block;
     }
 
@@ -68,38 +65,86 @@
     .container {
       width: min(1120px, 92%);
       margin-inline: auto;
-      padding-inline: 16px;
+      padding: 0 16px;
     }
 
-    /* Botão principal */
+    /* Botão WhatsApp */
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 8px;
       padding: 14px 20px;
       border-radius: 14px;
       background: var(--accent);
-      color: #fff;
-      font-weight: 700;
-      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.25);
-      transition: transform 0.25s ease, filter 0.25s ease;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
       will-change: transform;
     }
 
     .btn:hover {
-      transform: translateY(-1px);
-      filter: saturate(1.1);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.4);
     }
 
     .btn--ghost {
-      background: #fff;
+      background: white;
       color: var(--primary);
       border: 2px solid var(--primary);
     }
 
-    /* Hero */
+    .btn--ghost:hover {
+      background: #f8f9ff;
+    }
+
+    /* Notificação WhatsApp estilo */
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      padding: 12px 16px;
+      width: 300px;
+      z-index: 100;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      border-left: 4px solid var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .notification.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .notification svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--accent);
+    }
+
+    .notification p {
+      font-size: 0.95rem;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .notification span {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* HERO */
     .hero {
-      padding: 72px 0;
+      position: relative;
+      isolation: isolate;
+      padding: 80px 0 60px;
     }
 
     .hero__grid {
@@ -112,7 +157,7 @@
     .hero__badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 6px;
       background: #EEF2FF;
       color: var(--primary);
       padding: 8px 12px;
@@ -125,7 +170,7 @@
       font-size: clamp(1.9rem, 2.6vw + 1rem, 3.1rem);
       line-height: 1.15;
       margin: 0.6rem 0 1rem;
-      color: #0f172a;
+      color: #111;
     }
 
     .hero p {
@@ -149,7 +194,7 @@
     }
 
     .hero__media img {
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 4/3;
       object-fit: cover;
     }
 
@@ -164,36 +209,38 @@
       font-weight: 600;
       backdrop-filter: blur(6px);
       font-size: 0.9rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    /* Benefícios */
+    /* BENEFITS */
     .benefits {
-      padding: 56px 0;
+      padding: 60px 0;
       background: #f9fbff;
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 20px;
     }
 
     .card {
       background: var(--card);
       border-radius: 18px;
-      padding: 26px;
-      border: 1px solid #eef0ff;
-      box-shadow: 0 12px 32px rgba(8, 56, 199, 0.08);
-      transition: transform 0.2s ease;
+      padding: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 28px var(--shadow);
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(8, 56, 199, 0.18);
     }
 
     .card h3 {
-      margin: 8px 0 6px;
-      font-size: 1.2rem;
+      margin: 10px 0 8px;
+      font-size: 1.15rem;
       color: var(--primary);
     }
 
@@ -203,9 +250,9 @@
       font-size: 0.95rem;
     }
 
-    /* Como funciona */
+    /* HOW IT WORKS */
     .how {
-      padding: 60px 0;
+      padding: 70px 0;
     }
 
     .steps {
@@ -220,25 +267,27 @@
       border-radius: 16px;
       padding: 20px;
       text-align: center;
+      font-size: 0.95rem;
+      color: #555;
     }
 
     .step b {
       display: inline-flex;
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       align-items: center;
       justify-content: center;
       background: #EEF2FF;
       color: var(--primary);
       font-weight: 700;
-      font-size: 1.1rem;
+      margin-bottom: 8px;
     }
 
-    /* Vídeo - Simulado com capa */
+    /* VIDEO */
     .video {
-      padding: 72px 0;
-      background: #f1f5ff;
+      padding: 70px 0;
+      background: #f9fbff;
     }
 
     .video__wrap {
@@ -246,65 +295,39 @@
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
-      cursor: pointer;
     }
 
-    .video__thumbnail {
-      position: relative;
-      aspect-ratio: 16 / 9;
-      background-image: url('https://img.freepik.com/fotos-gratis/casal-feliz-posando-em-sua-casa-recem-comprada_1157-37919.jpg?w=1200&t=2024-01-01');
-      background-size: cover;
-      background-position: center;
-      border-radius: 20px;
+    .video__wrap iframe {
+      width: 100%;
+      height: 560px;
+      border: none;
     }
 
-    .video__play-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80px;
-      height: 80px;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 4px solid white;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    .video__play-btn::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 0;
-      border-left: 20px solid white;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-    }
-
-    /* CTA Fixo */
+    /* CTA BAR (Sticky) */
     .cta-bar {
       position: sticky;
       bottom: 0;
       z-index: 30;
       background: linear-gradient(90deg, var(--primary), var(--primary-dark));
       color: #fff;
+      padding: 12px 0;
     }
 
     .cta-bar__inner {
       display: flex;
-      gap: 16px;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 0;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .cta-bar strong {
+      font-size: 1.1rem;
     }
 
     /* FAQ */
     .faq {
-      padding: 60px 0;
+      padding: 70px 0;
     }
 
     details {
@@ -315,47 +338,61 @@
     }
 
     details + details {
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     summary {
       cursor: pointer;
       font-weight: 600;
       font-size: 1.05rem;
+      color: #111;
       list-style: none;
       position: relative;
       padding-right: 24px;
     }
 
-    summary::marker {
-      content: "";
-    }
-
     summary::after {
-      content: "▶";
+      content: "+";
       position: absolute;
       right: 0;
-      font-size: 0.8rem;
+      font-size: 1.3rem;
       color: var(--primary);
+      transition: 0.3s ease;
     }
 
     details[open] summary::after {
-      content: "▼";
+      content: "−";
     }
 
-    /* Rodapé */
+    details p {
+      margin-top: 10px;
+      color: var(--muted);
+      padding-left: 6px;
+    }
+
+    /* FOOTER */
     footer {
-      padding: 32px 0;
+      padding: 40px 0;
       color: #94a3b8;
-      text-align: center;
+      font-size: 0.95rem;
     }
 
-    /* Botão flutuante WhatsApp */
+    footer p {
+      margin: 0;
+    }
+
+    /* Floating WhatsApp Button */
     .floating-wa {
       position: fixed;
-      right: 18px;
-      bottom: 18px;
+      right: 20px;
+      bottom: 20px;
       z-index: 50;
+      animation: float 2.5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
     }
 
     .fab {
@@ -366,21 +403,24 @@
       place-items: center;
       background: var(--accent);
       box-shadow: 0 16px 30px rgba(37, 211, 102, 0.4);
-      transition: transform 0.2s ease;
+      transition: transform 0.3s ease;
     }
 
     .fab:hover {
-      transform: scale(1.12);
+      transform: scale(1.1);
     }
 
     /* Responsivo */
     @media (max-width: 920px) {
       .hero__grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 30px;
       }
       .steps {
         grid-template-columns: 1fr 1fr;
+      }
+      .video__wrap iframe {
+        height: 400px;
       }
     }
 
@@ -391,15 +431,28 @@
       .steps {
         grid-template-columns: 1fr;
       }
-      .hero h1 {
-        font-size: 2.2rem;
+      .cta-bar__inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .cta-bar strong {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- CTA Fixo -->
+  <!-- Notificação WhatsApp estilo -->
+  <div id="notification" class="notification">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 14.3c-.3 0-1.8-.9-2.1-1-.3-.1-.6-.1-.9.2-.2.3-.8 1-.9 1.2-.2.3-.4.2-.7.1-.6-.3-1.1-.7-1.5-1.2-.4-.5-1-1.3-1-2.3 0-1.1.6-2.1 1.2-2.7.6-.6 1.1-1 2.1-1 .9 0 1.4.1 2 .7.5.6.7 1.3.8 1.4.1.1 1.8 1.1 1.9 1.3.1.2.3 1.1.1 1.6-.1.5-.2.7-.4 1-.2.3-.4.4-.7.5-.3.1-1.1.1-1.7.1z"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    <div>
+      <p><strong>Novo usuário</strong></p>
+      <span>Anna solicitou análise agora</span>
+    </div>
+  </div>
+
+  <!-- Sticky CTA bar -->
   <div class="cta-bar">
     <div class="container cta-bar__inner">
       <strong>Descubra hoje qual imóvel você pode comprar</strong>
@@ -413,110 +466,104 @@
     </div>
   </div>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero__grid">
-        <div>
-          <span class="hero__badge">✅ Análise gratuita • ⏱️ Resposta rápida</span>
-          <h1>Solicite sua <span style="color:var(--primary)">Análise de Crédito</span> e saiba qual imóvel você pode comprar</h1>
-          <p>Atendimento humano e direto no WhatsApp. Eu comparo condições em diferentes bancos e mostro seu poder de compra com segurança e planejamento.</p>
-          <div class="hero__cta">
-            <a class="btn" href="https://forms.gle/X7oBGNvHzB35TXQs5" target="_blank" rel="noopener">📝 Fazer meu cadastro</a>
-            <a class="btn btn--ghost" href="#video">▶️ Ver como funciona</a>
-          </div>
-        </div>
-        <div class="hero__media">
-          <img src="https://img.freepik.com/fotos-premium/vista-acima-de-um-casal-feliz-descansando-no-chao-em-sua-nova-casa_1326977-2462.jpg" alt="Casal feliz em seu novo lar" loading="lazy">
-          <div class="hero__stamp">Aprovação rápida • Sem burocracia</div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="hero__badge">✅ Análise Gratuita • ⏱️ Resposta em 1h</span>
+        <h1>Solicite sua <span style="color:var(--primary)">Análise de Crédito</span> e saiba qual imóvel você pode comprar</h1>
+        <p>Atendimento humano e direto no WhatsApp. Eu comparo condições em diferentes bancos e mostro seu poder de compra com segurança e planejamento.</p>
+        <div class="hero__cta">
+          <a class="btn" href="https://forms.gle/X7oBGNvHzB35TXQs5" target="_blank" rel="noopener">📝 Fazer meu cadastro</a>
+          <a class="btn btn--ghost" href="#video">▶️ Ver como funciona</a>
         </div>
       </div>
-    </section>
-
-    <!-- Benefícios -->
-    <section class="benefits">
-      <div class="container">
-        <div class="cards">
-          <article class="card">
-            <h3>Qual imóvel cabe no seu bolso</h3>
-            <p>Simulamos cenários e te mostramos o valor ideal do imóvel para seu perfil financeiro.</p>
-          </article>
-          <article class="card">
-            <h3>Melhores condições de crédito</h3>
-            <p>Comparamos taxas e prazos em diferentes bancos para maximizar sua aprovação.</p>
-          </article>
-          <article class="card">
-            <h3>Acompanhamento do início ao fim</h3>
-            <p>Do pré-aprovado até a assinatura, você não fica sozinho em nenhuma etapa.</p>
-          </article>
-        </div>
+      <div class="hero__media">
+        <img src="https://img.freepik.com/fotos-premium/vista-acima-de-um-casal-feliz-descansando-no-chao-em-sua-nova-casa_1326977-2462.jpg" alt="Casal feliz na nova casa" loading="lazy">
+        <div class="hero__stamp">✅ Aprovação rápida • Sem burocracia</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Como Funciona -->
-    <section class="how">
-      <div class="container">
-        <h2 style="text-align:center;margin:0 0 18px">Como funciona</h2>
-        <p style="text-align:center;color:var(--muted);margin:0 0 24px">Passos simples para sair do plano e ir para as chaves</p>
-        <div class="steps">
-          <div class="step"><b>1</b> Solicite no WhatsApp e envie dados básicos</div>
-          <div class="step"><b>2</b> Analiso seu perfil e melhores opções</div>
-          <div class="step"><b>3</b> Descubra o valor do imóvel que pode comprar</div>
-          <div class="step"><b>4</b> Aprovação e assinatura com segurança</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vídeo com Capa -->
-    <section id="video" class="video">
-      <div class="container">
-        <h2 style="text-align:center;margin:0 0 18px">Veja como funciona o financiamento</h2>
-        <p style="text-align:center;color:var(--muted);margin:0 0 24px">Clique na imagem abaixo para assistir ao vídeo no YouTube.</p>
-        <div class="video__wrap" onclick="window.open('https://www.youtube.com/watch?v=ru8WTl-fPf0', '_blank')">
-          <div class="video__thumbnail">
-            <div class="video__play-btn"></div>
-          </div>
-        </div>
-        <div style="text-align:center;margin-top:24px">
-          <a class="btn" href="https://wa.me/5531992110188?text=Quero%20minha%20análise%20de%20crédito%20após%20ver%20o%20vídeo." target="_blank" rel="noopener">💬 Fazer minha Análise agora</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-      <div class="container">
-        <h2 style="text-align:center;margin:0 0 18px">Perguntas frequentes</h2>
-        <div style="max-width:860px;margin-inline:auto">
-          <details>
-            <summary>Quanto custa a análise?</summary>
-            <p>A análise inicial é gratuita. Se você avançar com a aprovação, explico todos os custos com transparência.</p>
-          </details>
-          <details>
-            <summary>Em quanto tempo recebo um retorno?</summary>
-            <p>Normalmente no mesmo dia útil, após envio dos dados básicos via WhatsApp.</p>
-          </details>
-          <details>
-            <summary>Preciso já ter um imóvel definido?</summary>
-            <p>Não. A análise te ajuda justamente a entender o ticket ideal para buscar o imóvel certo.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Rodapé -->
-  <footer>
+  <!-- BENEFITS -->
+  <section class="benefits">
     <div class="container">
+      <div class="cards">
+        <article class="card">
+          <h3>Qual imóvel cabe no seu bolso</h3>
+          <p>Simulamos cenários e te mostramos o valor ideal do imóvel para seu perfil financeiro.</p>
+        </article>
+        <article class="card">
+          <h3>Melhores condições de crédito</h3>
+          <p>Comparamos taxas e prazos em diferentes bancos para maximizar sua aprovação.</p>
+        </article>
+        <article class="card">
+          <h3>Acompanhamento do início ao fim</h3>
+          <p>Do pré-aprovado até a assinatura, você não fica sozinho em nenhuma etapa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how">
+    <div class="container">
+      <h2 style="text-align:center;margin:0 0 18px">Como funciona</h2>
+      <p style="text-align:center;color:var(--muted);margin:0 0 24px">Passos simples para sair do plano e ir para as chaves</p>
+      <div class="steps">
+        <div class="step"><b>1</b> Você envia dados básicos no WhatsApp.</div>
+        <div class="step"><b>2</b> Eu analiso e comparo bancos.</div>
+        <div class="step"><b>3</b> Você descobre seu poder de compra.</div>
+        <div class="step"><b>4</b> Aprovamos e fechamos com segurança.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VÍDEO -->
+  <section id="video" class="video">
+    <div class="container">
+      <h2 style="text-align:center;margin:0 0 18px">Assista o vídeo explicativo</h2>
+      <p style="text-align:center;color:var(--muted);margin:0 0 24px">Aprenda como funciona o financiamento imobiliário.</p>
+      <div class="video__wrap">
+        <iframe src="https://www.youtube.com/embed/ru8WTl-fPf0" title="Como financiar meu imóvel?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div style="text-align:center;margin-top:24px">
+        <a class="btn" href="https://wa.me/5531992110188?text=Quero%20minha%20análise%20de%20crédito%20após%20ver%20o%20vídeo." target="_blank" rel="noopener">💬 Fazer minha Análise agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h2 style="text-align:center;margin:0 0 18px">Perguntas frequentes</h2>
+      <div style="max-width:860px;margin-inline:auto">
+        <details>
+          <summary>Quanto custa a análise?</summary>
+          <p>A análise inicial é gratuita. Se você avançar com a aprovação, explico todos os custos com transparência.</p>
+        </details>
+        <details>
+          <summary>Em quanto tempo recebo um retorno?</summary>
+          <p>Normalmente no mesmo dia útil, após envio dos dados básicos via WhatsApp.</p>
+        </details>
+        <details>
+          <summary>Preciso já ter um imóvel definido?</summary>
+          <p>Não. A análise te ajuda justamente a entender o ticket ideal para buscar o imóvel certo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center">
       <p>© 2025 • Assessoria Imobiliária • Todos os direitos reservados</p>
-      <p style="margin-top:8px">
-        <a class="btn btn--ghost" href="https://wa.me/5531992110188?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida%20sobre%20financiamento." target="_blank" rel="noopener">💬 Tirar uma dúvida</a>
-      </p>
+      <a class="btn btn--ghost" href="https://wa.me/5531992110188?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida%20sobre%20financiamento." target="_blank" rel="noopener">💬 Tirar uma dúvida</a>
     </div>
   </footer>
 
-  <!-- Botão Flutuante WhatsApp -->
-  <a class="floating-wa" href="https://wa.me/5531992110188?text=Olá!%20Vim%20da%20sua%20landing%20page%20e%20quero%20minha%20análise%20de%20crédito." target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+  <!-- Floating WhatsApp -->
+  <a class="floating-wa" href="https://wa.me/5531992110188?text=Olá!%20Vim%20da%20sua%20landing%20page%20e%20quero%20minha%20análise%20de%20crédito." target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
     <div class="fab">
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M22.46 12c0 5.79-4.69 10.48-10.48 10.48-1.84 0-3.57-.48-5.08-1.32L2 22l.88-4.86a10.42 10.42 0 0 1-1.4-5.14C1.48 6.21 6.17 1.52 12 1.52S22.46 6.21 22.46 12Z"/>
@@ -532,12 +579,39 @@
     "@type": "ProfessionalService",
     "name": "Assessoria de Crédito Imobiliário",
     "areaServed": "Brasil",
-    "serviceArea": "Minas Gerais",
-    "telephone": "+5531992110188",
-    "url": "https://seusite.com",
     "sameAs": ["https://wa.me/5531992110188"]
   }
   </script>
 
+  <!-- Script para notificações aleatórias -->
+  <script>
+    const notifications = [
+      { name: "Carlos", action: "está vendo o vídeo explicativo" },
+      { name: "Ana", action: "acabou de enviar documentos" },
+      { name: "Ricardo", action: "solicitou análise agora" },
+      { name: "Julia", action: "fechou financiamento esta semana" },
+      { name: "Lucas", action: "perguntou sobre taxas" }
+    ];
+
+    function showNotification() {
+      const notif = document.getElementById("notification");
+      const random = notifications[Math.floor(Math.random() * notifications.length)];
+      
+      notif.querySelector("strong").textContent = random.name;
+      notif.querySelector("span").textContent = `${random.name} ${random.action}`;
+      
+      notif.classList.add("show");
+      
+      setTimeout(() => {
+        notif.classList.remove("show");
+      }, 3000);
+    }
+
+    // Primeira notificação após 3 segundos
+    setTimeout(showNotification, 3000);
+
+    // Depois, a cada 20-30 segundos
+    setInterval(showNotification, 25000);
+  </script>
 </body>
 </html>
